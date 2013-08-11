@@ -1,0 +1,25 @@
+技术文章整理系统
+
+golang+mongo
+
+文章表 article
+-----
+说明：无
+-----
+编号 id
+标题 title 
+内容 content
+添加时间 dateline
+浏览次数 view_count
+文章来源 source_url
+关键字 keywords
+-----
+功能：添加、修改、删除
+
+系列表 series
+-----
+说明：通过该记录可以确定一篇文章的系列文章
+-----
+文章编号序列 series
+-----
+功能：添加、修改、删除

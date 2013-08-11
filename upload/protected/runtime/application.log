@@ -1,0 +1,8 @@
+2013/08/11 23:15:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "backend/create".' in /home/wwwroot/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/wwwroot/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('backend/create')
+#1 /home/wwwroot/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/wwwroot/www.juzishouce.com/upload/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=backend/create
+---
