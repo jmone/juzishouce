@@ -2,6 +2,7 @@ package main
 
 import(
 	"net/http"
+	"html/template"
 	"fmt"
 )
 
@@ -16,7 +17,7 @@ func initBackendHandler(){
 
 // manager login
 func backendManagerLogin(w http.ResponseWriter, r *http.Request){
-	fmt.Fprintf(w, "manager login")
+	fmt.Fprintf(w, "Test manager login")
 }
 
 // manager logout
@@ -26,7 +27,12 @@ func backendManagerLogout(w http.ResponseWriter, r *http.Request){
 
 // article create
 func backendArticleCreate(w http.ResponseWriter, r *http.Request){
-	fmt.Fprintf(w, "article create")
+	//fmt.Fprintf(w, "article create")
+	t, err := template.New("create").Parse(`{{define "T"}}Hello, {{.}}{{end}}`)
+	err = t.ExecuteTemplate(w, "T", template.HTML("<script>alert('Test')</script>"))
+	if err != nil{
+		fmt.Println(err.Error())
+	}
 }
 
 // article delete
