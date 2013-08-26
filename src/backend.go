@@ -39,11 +39,14 @@ func backendArticleCreate(w http.ResponseWriter, r *http.Request) {
 		}
 	} else {
 		r.ParseForm()
-		fmt.Println("Title:", r.Form["title"][0])
-		fmt.Println("Content:", r.Form.Get("content"))
-		fmt.Println("Source url:", r.Form["source_url"])
-		fmt.Println("Keywords:", r.Form["keywords"])
-		fmt.Printf("%v", r.Form)
+		//fmt.Println("Title:", r.Form["title"][0])
+		//fmt.Println("Content:", r.Form.Get("content"))
+		//fmt.Println("Source url:", r.Form["source_url"])
+		//fmt.Println("Keywords:", r.Form["keywords"])
+		//fmt.Printf("%v", r.Form)
+		//article := article.Article{Id: 1, Title: r.Form.Get("content")}
+		article := article.Article{}
+		article.Create(r.Form.Get("title"), r.Form.Get("content"), 1000010, 0, r.Form.Get("source_url"), []string{"hello", "world"})
 	}
 }
 
