@@ -6,7 +6,7 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<link href="statics/css/tapo.home.css" rel="stylesheet" type="text/css" />
+<link href="" rel="stylesheet" type="text/css" />
 
 <title>YiiShare.com</title>
 
@@ -20,10 +20,31 @@
 
 <body>
 
+	<div class="article_form">
+	<form method="post" action="/backend/article/create">
+	<div class="row">
+		标题<br />
+		<input name="title" type="text" />
+	</div>
+	<div class="row">
+		内容<br />
+		<textarea name="content"></textarea>
+	</div>
+	<div class="row">
+		文章来源<br />
+		<input name="source_url" type="text" />
+	</div>
+	<div class="row">
+		关键词<br />
+		<input name="keywords" type="text" />
+	</div>
+	<div class="row">
+		<input type="submit" value="提交" />
+	</div>
+	</form>
+	</div>
 
 	<div class="foot">
-{{.Title}}
-{{template "hello" .}}
 		<p>
 
 			©2012 Yiishare.com

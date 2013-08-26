@@ -10,6 +10,10 @@ type Article struct{
 	Keywords []string
 }
 
+func init(){
+	//
+}
+
 func (a Article)Create(title string, content string, dateline uint32, viewCount uint32, sourceUrl string, keywords []string){
 
 }
